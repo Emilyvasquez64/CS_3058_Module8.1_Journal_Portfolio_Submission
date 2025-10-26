@@ -1,8 +1,42 @@
-Briefly summarize your client, Artemis Financial, and its software requirements. Who was the client? What issue did the company want you to address?
-What did you do well when you found your client’s software security vulnerabilities? Why is it important to code securely? What value does software security add to a company’s overall well-being?
-Which part of the vulnerability assessment was challenging or helpful to you?
-How did you increase layers of security? In the future, what would you use to assess vulnerabilities and decide which mitigation techniques to use?
-How did you make certain the code and software application were functional and secure? After refactoring the code, how did you check to see whether you introduced new vulnerabilities?
-What resources, tools, or coding practices did you use that might be helpful in future assignments or tasks?
-Employers sometimes ask for examples of work that you have successfully completed to show your skills, knowledge, and experience. What might you show future employers from this assignment?
-
+1. Briefly summarize your client, Artemis Financial, and its software requirements
+Artemis Financial is a financial services company that helps clients with investments, insurance, and long-term planning. 
+Since the company deals with private financial and personal data, they needed to make sure their software systems were protected from cyber threats. 
+Their main goal was to strengthen the security of their Java-based application by adding HTTPS for secure communication, using encryption to protect data, and running a vulnerability check on their project dependencies. 
+This would help them protect client information, prevent data breaches, and stay compliant with security standards like PCI DSS and GDPR.
+2. What did you do well when you found your client’s software security vulnerabilities?Why is it important to code securely? What value does software security add to a company’s overall well-being?
+I think I did well identifying the areas that needed improvement and fixing the vulnerabilities in the application. 
+I refactored the code so that it used AES encryption, SHA-256 hashing, and HTTPS communication. 
+These changes made sure the data stayed private and wasn’t changed during transfer. 
+It’s important to code securely because even small weaknesses can lead to major security problems, like data leaks or system compromises. 
+Secure coding keeps a company’s systems stable, protects customer data, and helps maintain trust. 
+Software security also reduces long-term risks and costs by preventing attacks before they happen, which keeps the company’s reputation strong and its customers confident.
+3. Which part of the vulnerability assessment was challenging or helpful to you?
+The most challenging part of the vulnerability assessment was reading and interpreting the OWASP Dependency-Check report.
+Some results were false positives, so I had to figure out which vulnerabilities were real risks. Even though it was tricky, this part was really helpful because it showed me how third-party libraries can introduce security problems. 
+It also helped me understand how important it is to monitor dependencies, keep them updated, and check vulnerability databases regularly. 
+Learning to use the OWASP Dependency-Check tool effectively was one of the most useful parts of this project.
+4. How did you increase layers of security? In the future, what would you use to assess vulnerabilities and decide which mitigation techniques to use?
+I added more layers of security by setting up HTTPS using SSL certificates so data could be transferred safely. 
+I also used SHA-256 hashing to make sure data integrity was protected, and AES GCM encryption for strong data protection. 
+Adding the OWASP Dependency-Check plugin to the project helped identify any vulnerabilities in third-party libraries.
+In the future, I would use tools like SonarQube, Snyk, and OWASP Dependency-Check to assess vulnerabilities.
+I would also do manual code reviews and some penetration testing to make sure no weak points are missed.
+To decide which mitigation techniques to use, I would look at the severity of the vulnerability, how likely it is to be exploited, and how much it could impact the system or users.
+5. How did you make certain the code and software application were functional and secure? After refactoring the code, how did you check to see whether you introduced new vulnerabilities?
+I tested the code step-by-step to make sure it still worked correctly after the changes.
+I ran the application and verified that the HTTPS connection worked and that the checksum endpoint gave the right output.
+I checked that the SSL certificate was set up correctly and confirmed that data was being transmitted securely.
+To make sure no new vulnerabilities were added, I ran another OWASP Dependency-Check scan after refactoring and reviewed the results. 
+I also looked through the application logs to make sure sensitive data wasn’t being exposed.
+These steps helped confirm that the application was both functional and secure.
+6. What resources, tools, or coding practices did you use that might be helpful in future assignments or tasks?
+I used several tools and coding practices that will definitely be useful in the future. 
+I used the OWASP Dependency-Check plugin to find vulnerabilities in dependencies, Java’s SecureRandom to create secure random numbers, AES GCM for encryption, and SHA-256 for hashing.
+I also followed secure coding guidelines from OWASP, Microsoft, and NIST, which helped me understand the right way to handle keys, certificates, and sensitive data.
+These practices taught me how to validate inputs, secure communication using SSL/TLS, and avoid using hardcoded secrets.
+I can use all of these tools and methods in future software projects to keep applications secure.
+7. Employers sometimes ask for examples of work that you have successfully completed to show your skills, knowledge, and experience.What might you show future employers from this assignment?
+If an employer asked to see my work, I would show them the refactored code, the HTTPS setup process, and the vulnerability assessment report.
+These show that I understand how to apply secure coding techniques, work with encryption, and use security tools in real-world projects.
+This project demonstrates that I can write secure, functional software while following best practices for testing and documentation. 
+It’s a strong example of how I can combine technical knowledge with attention to detail to keep applications safe and reliable.
